@@ -1,0 +1,461 @@
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Permanent Marker'), local('PermanentMarker'), url('fonts/9vYsg5VgPHKK8SXYbf3sMupm9E4gBdgiUiSJePew_SQ.woff') format('woff');
+}
+::selection {
+    background: none;
+}
+::-moz-selection {
+    background: none;
+}
+body {
+	-ms-content-zooming: none;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image: url('img/backgrounds/bg_1.png');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:'segoe ui';
+    font-size:12px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    cursor: default;
+}
+img#loading {
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 10000px;
+}
+#loading_bg {
+    background: -webkit-linear-gradient(#FFF, #BDBDBD); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FFF, #BDBDBD); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FFF, #BDBDBD); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FFF, #BDBDBD); /* Standard syntax */
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 99999999999;
+    top: 0px;
+    left: 0px;
+    padding-top: 10%;
+}
+
+hr { border: 0px; border-bottom: 2px dashed #000; padding: 10px; }
+
+.clear { clear: both;}
+
+.cake {
+	margin-top: 10px;
+    width: 95%;
+    max-width: 500px;
+    cursor: pointer;
+    position: relative;
+    z-index: 999999;
+}
+.cake:hover {
+    width: 100%;
+    max-width: 510px;
+    margin-top: 5px;
+}
+.cake:active {
+    width: 90%;
+    max-width: 490px;
+    margin-top: 20px;
+}
+.count_box {
+    position: absolute;
+    z-index: 999999;
+    width: 250px;
+    left: 10px;
+    bottom: 10px;
+    padding: 5px;
+    background-image: url('img/counterbox.png');
+    background-size: 100%;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 1px 1px 18px #000;
+    border: 1px solid #000;
+}
+.count_box h1 {
+    position: absolute;
+    margin-top: -23px;
+    margin-left: -13px;
+    transform: rotate(350deg);
+    font-size: 27px;
+}
+#show_achieved h1 {
+    margin-top: -15px;
+    margin-bottom: -5px;
+    transform: rotate(350deg);
+    font-size: 27px;  
+}
+#show_achieved {
+    background-image: url('img/achievements.png');
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 5px;
+    z-index: 9999999;
+    height: 300px;
+    width: 260px;
+    margin: 5px;
+    overflow: auto;
+    box-shadow: 1px 1px 18px #000;
+    text-align: left;
+    font-size:14px;
+    border: 1px solid #000;
+}
+#show_achieved p, #show_achieved h1 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#opener {
+    cursor: pointer;
+    background: rgba(0,0,0,0.2);
+    margin: -5px;
+    padding: 2px;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 1px 8px #424242;
+    text-align: center;
+}
+#opener:hover {
+    background: -webkit-linear-gradient(#31B404, #0B610B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#31B404, #0B610B); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#31B404, #0B610B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#31B404, #0B610B); /* Standard syntax */
+}
+#closer {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 1px 8px #424242;
+}
+
+#heading {
+    margin-top: 20px;
+    font-size: 20px;
+    position: relative;
+    z-index: -2;
+}
+
+h1,h2, h3, h4, h5 {
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 1px 8px #424242;
+    font-weight: 100;
+}
+
+
+#logo, #menu, #close, #close_menu {
+    position: fixed;
+    top: 15px;	
+    border-radius: 1000px;
+    border: 2px dashed #000;
+    cursor: pointer;
+}
+#logo {
+    left: 5px;
+    z-index: 999999;
+}
+#menu {
+    right: 5px;
+    z-index: 999999;
+}
+#close {
+    left: 5px;
+    z-index: 99999999;
+}
+#close_menu {
+	right: 5px;
+    z-index: 99999999;
+}
+#logo img { width: 50px; }
+#close img { width: 30px; padding: 10px; }
+
+#flashy {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+}
+#flashy img {
+    width: 100%;
+    max-width: 500px;
+    opacity: 0.5;
+}
+#flashytwo {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    z-index: -2;
+}
+#flashytwo img {
+    width: 100%;
+    max-width: 500px;
+    opacity: 0.2;
+}
+#news {
+	background-image: url('img/achievements.png');
+	position: absolute;
+	z-index: 9999999;
+	height: 100%;
+	width: 250px;
+	padding: 0px 20px;
+	overflow: auto;
+	top: 0px;
+	left: 0px;
+    box-shadow: 1px 1px 18px #000;
+}
+.version {
+    position: absolute; 
+    bottom: 5px; 
+    right: 20px; 
+    z-index: 99999999;
+   	opacity: 0.5;
+    text-shadow: 1px 1px 8px #424242; 
+    font-style: normal; 
+    font-family: 'Permanent Marker', cursive; 
+    text-decoration: none; 
+    font-size: 25px;
+}
+
+.achievements {
+	background-image: url('img/achievements.png');
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 0px 20px;
+    width: 250px;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: 1px 1px 18px #000;
+    z-index: 9999999;
+}
+.achievements li {
+    list-style-type: none;
+}
+#achiev img {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+	padding: 5px;
+	float: left;
+    border-radius: 1000px;
+    border: 2px dashed #FFF;
+}
+#new_cake1, #new_cake2, #new_cake3, #new_cake4, #new_cake5, #new_cake6, #new_cake7, #new_cake8, #new_cake9, #new_cake10, 
+#achiev1, #achiev2, #achiev3, #achiev4, #achiev5, #achiev6, #achiev7,  #achiev8, #achiev9, #achiev10 {
+	opacity: 0.2;
+}
+.achieved {
+	opacity: 1;
+}
+.cakes {
+    /* background-image: url('img/button.png'); */
+    background: -webkit-linear-gradient(#31B404, #0B610B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#31B404, #0B610B); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#31B404, #0B610B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#31B404, #0B610B); /* Standard syntax */
+    border-radius: 5px;
+    border: 1px solid #424242;
+    text-align: left;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 190px;
+    transition: 0.5s;
+}
+.cakes #img {
+    width: 25%;
+    float: left;
+    padding-top: 10px;
+}
+.cakes #img img {
+    width: 100%;
+}
+.cakes #name {
+    float: left;
+    width: 75%;
+    text-align: right;
+}
+.cakes b {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: normal;
+}
+.achievements li { float: left; }
+.achievements li ul { display: none; }
+.achievements li ul b { 
+    display: block;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: lowercase;
+    margin-top: -7px;
+    border-bottom: 1px dotted #FFF;
+    font-family: 'Permanent Marker', cursive;
+}
+.achievements li:hover ul {
+    display: block;
+    width: 190px;
+    text-align: left;
+    padding: 5px;
+    background-image: url('img/achievement_new.png');
+    color: #FFF;
+    border: 2px dashed #FFF;
+    position: absolute;
+    z-index: 999999;
+    right: 17px;
+    margin-top: 60px;
+    border-radius: 5px;
+    border: 1px solid #424242;
+}
+#notifications {
+    width: 270px;
+    margin: 0 auto;
+    position: relative;
+}
+#note {
+    background-image: url('img/achievement_new.png');
+    border-radius: 5px;
+    border: 2px dashed #FFF;
+    color: #FFF;
+    width: 250px;
+    text-align: left;
+    padding: 0px 10px;
+    top: 25px;
+    font-size: 15px;
+    position: absolute;
+    z-index: 99999999999;
+}
+#note b {
+    display: block;
+    font-size: 20px;
+    text-transform: lowercase;
+    margin-top: -7px;
+    border-bottom: 1px dotted #FFF;
+    font-family: 'Permanent Marker', cursive;
+}
+#note img {
+    width: 65px;
+    float: left;
+    position: relative;
+    margin-top: -25px;
+    margin-left: -25px;
+    border: 2px dashed #FFF;
+    border-radius: 1000px;
+}
+.button {
+	background: -webkit-linear-gradient(#31B404, #0B610B); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#31B404, #0B610B); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#31B404, #0B610B); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#31B404, #0B610B); /* Standard syntax */
+	padding: 10px 15px;
+	color: #FFF;
+	border-radius: 50px;
+	text-align: center;
+	margin: 15px 0px;
+	cursor: pointer;
+	transition: 0.1s;
+}
+.button:hover, .button:active {
+	background: -webkit-linear-gradient(#424242, #000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#424242, #000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#424242, #000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#424242, #000); /* Standard syntax */
+}
+/* RESPONSIVE */
+@media screen and (min-width: 0px) and (max-width: 650px){
+	#menu img { display: block; width: 50px; }
+	#close_menu img { display: block; width: 30px; padding: 10px; }
+	.achieve_hide {
+		display: none;
+	}
+	.achieve_show {
+		display: block;
+	}
+	#heading {
+		display: none;
+	}
+    .version {
+        display: none;
+    }
+    #news {
+    	width: 90%;
+    	padding: 5%;
+    }
+    .achievements {
+    	width: 90%;
+    	padding: 5%;
+    }
+    #flashy, #cake {
+    	margin-top: 50px;
+    }
+    .cakes {
+    	width: 44%;
+    	padding: 1%;
+    	margin: 1%;
+    }
+    .cakes #img {
+        display: none;
+    }
+    .cakes #name {
+        width: 100%;
+        text-align: center;
+    }
+    .cakes k {
+        display: block;
+    }
+}
+@media screen and (min-width: 651px) and (max-width: 1000px){
+	#menu img { width: 0px; height: 0px; }
+	#close_menu img { width: 0px; height: 0px; }
+    .achievements {
+    	width: 150px;
+    }
+    #news {
+    	width: 150px;
+    }
+    .cakes {
+    	width: 130px;
+    }
+    .cakes #img {
+    	display: none;
+    }
+    .cakes #name {
+    	width: 100%;
+    	text-align: center;
+    }
+    #achiev img {
+    	margin: 2px;
+    }
+}
+@media screen and (min-width: 1001px) and (max-width: 999999999px) {
+	#menu img { width: 0px; height: 0px; }
+	#close_menu img { width: 0px; height: 0px; }
+}
+.confirm_true {
+    padding: 2px;
+    border: 1px dashed #FF0000;
+    display: inline-block;
+    margin: 2px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.confirm_false {
+    padding: 2px;
+    border: 1px dashed #FFF;
+    display: inline-block;
+    margin: 2px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}

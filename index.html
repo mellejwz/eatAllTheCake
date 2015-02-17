@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="scrollbar/jquery.mCustomScrollbar.css" />
+
+        <title>Loading Eat The Cake...</title>
+
+        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="icon" href="img/favicon.png">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    </head>
+    <body onload="loadingApp()">
+
+            <!-- LOAD EVERYTHING FIRST -->
+            <div id='loading_bg'>
+                <h1>Eat All The Cake is loading...</h1>
+                <img src='img/loading.gif' id='loading'>
+            </div>
+
+            <!-- AFTER EVERYTHING IS LOADED -->
+
+    		<!-- Display Notifications -->
+            <div id='notifications'><div id='note'></div></div>
+
+            <div class='achievements content' id='achievements'>
+
+            	<h1>Upgrades</h1>
+            	<i>Testing...</i>
+            	<div onClick='upgradeOne()' class='button'>Upgrade One</div>
+
+                <!-- Display Achievements -->
+                <h1>Achievements</h1>
+                <div id='achiev'></div>
+
+                <div class='clear'><hr></div>
+
+                <!-- Display All the Cakes -->
+                <h1>Cakes</h1>
+                <div id='ava_cakes'></div>
+
+                <br><br><br>
+            </div>
+
+            <div id='logo' onClick='showNews()'><img src='img/logo.png'></div>
+            <div id='menu' onClick='showMenu()'><img src='img/menu.png'></div>
+            <div id='close_menu' onClick='hideMenu()'><img src='img/close.png'></div>
+
+            <!-- Display Headings and the Cakes -->
+            <p id='heading'></p>
+
+            <div id='flashy'><img src='img/cake_bg.png'></div>
+            <div id='flashytwo'><img src='img/cake_bg.png'></div>
+
+            <div onClick='feed()'><p id='cake_counter'></p><img src='img/cake1/cake_1.png' id='cake' class='cake'/></div>
+
+            <div class='count_box'>
+                <h1>Stats</h1>
+                <p id='counter'>Loading..</p><p id='calories'></p><p id='caloriess_all'></p>
+                <div onClick='showAchieved()' id='opener'>Show More</div>
+            </div>
+
+            <div id='show_achieved' class='content'>
+                <h1>Stats</h1><div onClick='hideAchieved()' id='closer'>Close</div>
+                <p id='counterr'>Loading..</p>
+                <p id='bites'></p>
+                <p id='caloriess'></p>
+                <p id='calories_all'></p>
+                <p id='workout'></p>
+                <p id='achieved'></p>
+                <p id='owned'></p>
+                <p id='upgrades'></p>
+            </div>
+
+            <div id='news' class='content'><div id='close' onClick='hideNews()'><img src='img/close.png'></div>
+            	<h1>Changelog</h1>
+            	<p><i style='opacity: 0.6;'>At first I will not keep a real good changelog ;)</i></p>
+
+            	<h2>11/3/2014 Alpha Release</h2>
+            	<p>Made this as a school project, but my classmates enjoyed it so much I decided to release it online :)</p>
+
+            	<hr>
+            	<div onClick='resetCheck()' class='button'>Reset Game</div>
+            	<div onclick="window.window.open ('http://twitter.com/papino120')" class='button'>Twitter</div>
+            	<div onclick="window.window.open ('http://papinschipper.nl')" class='button'>My Website</div>
+
+            </div>
+
+            <i class='version'>Alpha V.2.0.2.8</i>
+
+        <script type="text/javascript" src="java.js"></script>
+        <script type="text/javascript" src="rotate.js"></script>
+        <script src="scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    </body>
+</html>

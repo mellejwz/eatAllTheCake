@@ -1,0 +1,3 @@
+- Savegames
+- Buy upgrades using calories
+- Use sprite img's instead
