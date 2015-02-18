@@ -174,7 +174,7 @@ var cakesCal = ["5", "10", "20", "45", "100", "500"];
 var cakesLvl = ["0", "5", "10", "20", "50", "249"];
 var cakesid = ["1", "2", "3", "4", "5", "6"];
 for (index = 0; index < cakesAva.length; index++) {
-    text += "<div class='cakes' id='new_cake"+cakesid[index]+"'><div id='img'><img src='img/cake"+cakesid[index]+"/cake_1.png'></div><div id='name'><p><b>" +cakesAva[index]+" <k>("+cakesLvl[index]+")</k></b></p><p>"+cakesCal[index]+" Kcal/bite</p></div></div>";
+    text += "<div class='cakes' id='new_cake"+cakesid[index]+"'><div id='img'><img src='img/cakes/cake_"+cakesid[index]+"_thumb.png'></div><div id='name'><p><b>" +cakesAva[index]+" <k>("+cakesLvl[index]+")</k></b></p><p>"+cakesCal[index]+" Kcal/bite</p></div></div>";
 }
 text += "";
 document.getElementById("ava_cakes").innerHTML = text;
@@ -217,7 +217,6 @@ function feed(){
 		var cal_gain = 20;
 		var work_gain = 15;
 		$("#new_cake3").css({opacity: 1});
-		$('body').css('background-image', 'url(img/backgrounds/bg_2.png)');
 	}
 	if(count >= cakesLvl[3]) {
 		var newcake = cakesAva[3];
@@ -230,14 +229,12 @@ function feed(){
 		var cal_gain = 100;
 		var work_gain = 45;
 		$("#new_cake5").css({opacity: 1});
-		$('body').css('background-image', 'url(img/backgrounds/bg_3.png)');
 	}
 	if(count >= cakesLvl[5]) {
 		var newcake = cakesAva[5];
 		var cal_gain = 500;
 		var work_gain = 375;
 		$("#new_cake6").css({opacity: 1});
-		$('body').css('background-image', 'url(img/backgrounds/bg_4.png)');
 	}
 
 	// Count calories and workout
