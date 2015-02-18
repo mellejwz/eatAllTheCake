@@ -3,11 +3,11 @@ function loadingApp() {
 	$( "#loading" ).fadeOut( fadetime );	
 	$( "#loading_bg" ).fadeOut( fadetime );
 }
-var angleLoad = 0;
-setInterval(function(){
-     angleLoad+=3;
-     $("#loading").rotate(angle);
- },250);
+// var angleLoad = 0;
+// setInterval(function(){
+//      angleLoad+=3;
+//      $("#loading").rotate(angle);
+//  },250);
 
 //Custom scrollbar
 (function($){
