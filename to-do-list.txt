@@ -1,3 +1,4 @@
 - Savegames (Cookies or something...)
 - Buy upgrades using calories
 - Use sprite img's instead
+- remove changing backgrounds, add falling cakes instead
