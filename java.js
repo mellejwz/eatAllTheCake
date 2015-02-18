@@ -24,6 +24,9 @@ $(window).load(function(){
 //What cake to start with
 var i = 1;
 
+//Begin at the top of the sprite
+var sprite = 0;
+
 //Info
 var title = 'Eat All The Cake';
 var heading = "I'm hungry, gimme cake!";
@@ -287,19 +290,20 @@ function feed(){
 
 	// Change headings
 	i++
+	sprite = sprite + 500;
+
 	if(i == 13){ 
 		count++;
 		document.getElementById('heading').innerHTML = '<h1>'+count+' Cakes eaten ('+bites+' Bites)</h1>';
-		document.getElementById('cake_counter').innerHTML = '<h1 >'+heading_end+'</h1>';
 	}
 	if(i != 13) {
 		document.getElementById('heading').innerHTML = '<h1>'+heading+'</h1>';
-		document.getElementById('cake_counter').innerHTML = ' ';
 	}
 
 	// Simple fix for a loop :P
 	if(i == 14){
 		i = 1;
+		sprite = 0;
 	}
 
 	// Cakes + Notifications
@@ -311,8 +315,9 @@ function feed(){
 		}
 	}
 
-	document.getElementById('cake').src = 'img/cake'+cake_id+'/cake_'+i+'.png';
-	
+	// document.getElementById('cake_img').src = 'img/cake_'+cake_id+'/cake_'+i+'.png';
+	document.getElementById('cake_img').style.marginTop = "-"+sprite+"px";
+
 	// Achievements
 	if(bites == 1) {
 		var achieved_id = ach_id[0];

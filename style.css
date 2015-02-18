@@ -55,27 +55,17 @@ hr { border: 0px; border-bottom: 2px dashed #000; padding: 10px; }
 
 .cake {
 	margin-top: 10px;
-    width: 95%;
-    height: 95vw;
-    max-height: 500px;
-    max-width: 500px;
+	height: 500px;
+    width: 500px;
     cursor: pointer;
     position: relative;
     z-index: 999999;
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
 }
-.cake:hover {
-    width: 100%;
-    max-width: 510px;
-    height: 100vw;
-    max-height: 510px;
-    margin-top: 5px;
-}
-.cake:active {
-    width: 90%;
-    max-width: 490px;
-    margin-top: 20px;
-    height: 90vw;
-    max-height: 490px;
+.cake img {
+	width: 100%;	
 }
 .count_box {
     position: absolute;
