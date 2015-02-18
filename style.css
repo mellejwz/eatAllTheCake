@@ -66,12 +66,16 @@ hr { border: 0px; border-bottom: 2px dashed #000; padding: 10px; }
 .cake:hover {
     width: 100%;
     max-width: 510px;
+    height: 100vw;
+    max-height: 510px;
     margin-top: 5px;
 }
 .cake:active {
     width: 90%;
     max-width: 490px;
     margin-top: 20px;
+    height: 90vw;
+    max-height: 490px;
 }
 .count_box {
     position: absolute;
