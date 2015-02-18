@@ -2,3 +2,4 @@
 - Buy upgrades using calories
 - Use sprite img's instead
 - remove changing backgrounds, add falling cakes instead
+- Rainbow cake does not work, everything stopts after 249 cakes
