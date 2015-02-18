@@ -315,8 +315,8 @@ function feed(){
 		}
 	}
 
-	// document.getElementById('cake_img').src = 'img/cake_'+cake_id+'/cake_'+i+'.png';
 	document.getElementById('cake_img').style.marginTop = "-"+sprite+"px";
+	document.getElementById('cake_img').src = 'img/cakes/cake_'+cake_id+'.png';
 
 	// Achievements
 	if(bites == 1) {
