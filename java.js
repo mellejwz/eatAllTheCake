@@ -195,6 +195,15 @@ document.getElementById("achiev").innerHTML = content;
 if(bites == 0) {
 	$("#new_cake1").css({opacity: 1});
 }
+$(".cakes").mouseover(function() {
+	$(this).css({opacity: 1});
+});
+$(".cakes").mouseleave(function() {
+	$(this).css({opacity: 0.3});
+	$("#new_cake1").css({opacity: 1});
+});
+
+
 
 // Everything done after clicking the cake
 function feed(){

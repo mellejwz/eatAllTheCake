@@ -261,11 +261,7 @@ h1,h2, h3, h4, h5 {
 	opacity: 1;
 }
 .cakes {
-    /* background-image: url('img/button.png'); */
-    background: -webkit-linear-gradient(#31B404, #0B610B); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#31B404, #0B610B); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#31B404, #0B610B); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#31B404, #0B610B); /* Standard syntax */
+    background-image: url('img/button.png');
     border-radius: 5px;
     border: 1px solid #424242;
     text-align: left;
@@ -274,6 +270,7 @@ h1,h2, h3, h4, h5 {
     display: inline-block;
     width: 190px;
     transition: 0.5s;
+	box-shadow: 1px 1px 8px #000;
 }
 .cakes #img {
     width: 25%;
@@ -343,7 +340,7 @@ h1,h2, h3, h4, h5 {
     text-transform: lowercase;
     margin-top: -7px;
     border-bottom: 1px dotted #FFF;
-    font-family: 'Permanent Marker', cursive;
+	font-family: 'Permanent Marker', cursive;
 }
 #note img {
     width: 65px;
@@ -355,23 +352,21 @@ h1,h2, h3, h4, h5 {
     border-radius: 1000px;
 }
 .button {
-	background: -webkit-linear-gradient(#31B404, #0B610B); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#31B404, #0B610B); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#31B404, #0B610B); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#31B404, #0B610B); /* Standard syntax */
-	padding: 10px 15px;
-	color: #FFF;
-	border-radius: 50px;
+	background-image: url('img/button.png');
+	padding: 20px 15px;
+	color: #000;
+	border-radius: 7px;
 	text-align: center;
 	margin: 15px 0px;
 	cursor: pointer;
-	transition: 0.1s;
+	transition: 0.2s;
+	border: 1px solid #000;    
+	font-family: 'Permanent Marker', cursive;
+	box-shadow: 1px 1px 8px #000;
 }
 .button:hover, .button:active {
-	background: -webkit-linear-gradient(#424242, #000); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#424242, #000); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#424242, #000); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#424242, #000); /* Standard syntax */
+	background-image: url('img/button.png');
+	text-shadow: 1px 1px 4px #DDD;
 }
 /* RESPONSIVE */
 @media screen and (min-width: 0px) and (max-width: 650px){
