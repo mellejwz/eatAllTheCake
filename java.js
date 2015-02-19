@@ -30,7 +30,6 @@ var sprite = 0;
 //Info
 var title = 'Eat All The Cake';
 var heading = "I'm hungry, gimme cake!";
-var heading_end = "Click to eat more cake :D!";
 var bg = 1; //Background
 
 // Time for de notifications to show
@@ -169,7 +168,7 @@ $( "#note" ).delay(0).fadeOut( 0 );
 //Perhaps this could have been done a lot easier, but he, I'm still learning :P
 var index;
 var text = "";
-var cakesAva = ["Cherry Muffin", "Strawberry Pie", "Blueberry Pie", "Apple Pie", "Donut", "Rainbow Cake"];
+var cakesAva = ["Chocolate Muffin", "Strawberry Pie", "Blueberry Pie", "Apple Pie", "Donut", "Rainbow Cake"];
 var cakesCal = ["5", "10", "20", "45", "100", "500"];
 var cakesLvl = ["0", "5", "10", "20", "50", "249"];
 var cakesid = ["1", "2", "3", "4", "5", "6"];
@@ -214,36 +213,42 @@ function feed(){
 		var cal_gain = 5;
 		var work_gain = 2.5;
 		$("#new_cake1").css({opacity: 1}); //Do NOT change css to animate or whatever, it lags! (Transition effect is provided in CSS)
+		heading = 'Cupcake Madness';
 	}
 	if(count >= cakesLvl[1]) {
 		var newcake = cakesAva[1];
 		var cal_gain = 10;
 		var work_gain = 5;
 		$("#new_cake2").css({opacity: 1});
+		heading = '“Now that\'s a pie!.” ';
 	}
 	if(count >= cakesLvl[2]) {
 		var newcake = cakesAva[2];
 		var cal_gain = 20;
 		var work_gain = 15;
 		$("#new_cake3").css({opacity: 1});
+		heading = '“Pie makes everybody happy.” ';
 	}
 	if(count >= cakesLvl[3]) {
 		var newcake = cakesAva[3];
 		var cal_gain = 45;
 		var work_gain = 30;
 		$("#new_cake4").css({opacity: 1});
+		heading = '“Who wants pie?”';
 	}
 	if(count >= cakesLvl[4]) {
 		var newcake = cakesAva[4];
 		var cal_gain = 100;
 		var work_gain = 45;
 		$("#new_cake5").css({opacity: 1});
+		heading = 'Hmmmm.... Donut';
 	}
 	if(count >= cakesLvl[5]) {
 		var newcake = cakesAva[5];
 		var cal_gain = 500;
 		var work_gain = 375;
 		$("#new_cake6").css({opacity: 1});
+		heading = 'Rainbow!!!!!';
 	}
 
 	// Count calories and workout
@@ -300,10 +305,12 @@ function feed(){
 
 	if(i == 13){ 
 		count++;
-		document.getElementById('heading').innerHTML = '<h1>'+count+' Cakes eaten ('+bites+' Bites)</h1>';
+		document.getElementById('heading').innerHTML = '<h2>Eat more '+newcake+' :D</h2>';
+		document.getElementById('subheading').innerHTML = '<h1>'+count+' Cakes eaten ('+bites+' Bites)</h1>';
 	}
 	if(i != 13) {
-		document.getElementById('heading').innerHTML = '<h1>'+heading+'</h1>';
+		document.getElementById('heading').innerHTML = '<h2>'+heading+'</h2>';
+		document.getElementById('subheading').innerHTML = '<h1>'+count+' Cakes eaten ('+bites+' Bites)</h1>';
 	}
 
 	// Simple fix for a loop :P

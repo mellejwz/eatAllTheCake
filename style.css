@@ -98,7 +98,7 @@ hr { border: 0px; border-bottom: 2px dashed #000; padding: 10px; }
     font-size: 27px;  
 }
 #show_achieved {
-    background-image: url('img/achievements.png');
+    background-image: url('img/button.png');
     position: absolute;
     bottom: 5px;
     left: 5px;
@@ -147,7 +147,14 @@ hr { border: 0px; border-bottom: 2px dashed #000; padding: 10px; }
     position: relative;
     z-index: -2;
 }
-
+#subheading {
+	background-color: rgba(0,0,0,0.7);
+	color: #FFF;
+	border-radius: 50px;
+	display: inline-block;
+	padding: 0px 45px;
+	margin-top: -20px;
+}
 h1,h2, h3, h4, h5 {
     font-family: 'Permanent Marker', cursive;
     text-shadow: 1px 1px 8px #424242;
