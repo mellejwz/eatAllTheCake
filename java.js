@@ -1,3 +1,4 @@
+// some code by Melle Zwerver
 // Show loading screen
 function loadingApp() {
 	$( "#loading" ).fadeOut( fadetime );	
