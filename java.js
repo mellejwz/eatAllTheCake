@@ -276,7 +276,7 @@ function feed(){
 	if(work_total >= (60*24*7)) {
 		var work_weeks = work_total / (60*24*7);
 		var time = ' Weeks';
-		var work_time = work_weeks.toFixed(0); 
+		var work_time = work_weeks.toFixed(0);
 	}
 
 	if(work_total >= (60*24*31)) {
@@ -291,8 +291,8 @@ function feed(){
 		var work_time = work_years.toFixed(0); 
 	}
 
-	//Add Unlocked cakes to stats
-	if(i == 1) {
+	//Unlock cakes
+	if(i == 13) {
 		if(count == 5 || count == 10 || count == 20 || count == 50 || count == 249) {
 			cake_id++;	
 			owned++;
